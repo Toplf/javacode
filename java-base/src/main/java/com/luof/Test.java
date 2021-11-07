@@ -1,9 +1,9 @@
-package com.luof.base;
+package com.luof;
 
 public class Test {
 
     public static void main(String[] args) {
-        System.out.println(5 >> 3);
+        System.out.println(9 << 4 );
 
         //System.out.println("hello word");
 
