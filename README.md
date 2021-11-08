@@ -245,13 +245,134 @@ javadoc -d  mydoc -auther -version Hello.java
 
 ``````
 java类及类成员
-属 性：对应类中的成员变量(描述事物的特征)
+1. 属 性：对应类中的成员变量(描述事物的特征)
 	语法格式：
     修饰符  类型  属性名 =初值 ; 
     说明:修饰符private:该属性只能由该类的方法访问，通过get/set方法获取。
         修饰符public:该属性可以被该类以外的方法访问，通过类将类中的属性在其他类中点出来。    
         类型：任何基本类型，如int、boolean或任何类。
         
-行 为：对应类中的成员方法(描述事物的行为
+    
+	
+2. 行 为：对应类中的成员方法(描述事物的行为)
+
+3. 构造器(构造方法)
+	构造器的特征
+    它具有与类相同的名称
+    它不声明返回值类型。（与声明为void不同）
+    不能被static、final、synchronized、abstract、native修饰，不能有return语句返回值
+
+    构造器的作用：创建对象；给对象进行初始化
+    如：Order o = new Order();    
+       Person p = new Person(“Peter”,15);
+    如同我们规定每个“人”一出生就必须先剪脐带，我们就可以在“人”的构造方法中加入完成“剪脐带”的程序代码，
+    于是每个“人”一出生就会自动完成“剪脐带”，程序就不必再在每个人刚出生时一个一个地告诉他们要“剪脐带”了
+
+
+
+
 ``````
+
+**四种访问权限修饰符**
+
+>Java权限修饰符public、protected、private置于类的成员定义前，用来限定对象对该类成员的访问权限。
+
+| **修饰符** | **类内部** | **同一个包** | **子类** | **任何地方** |
+| ---------- | ---------- | ------------ | -------- | ------------ |
+| private    | Yes        |              |          |              |
+| (缺省)     | Yes        | Yes          |          |              |
+| protected  | Yes        | Yes          | Yes      |              |
+| public     | Yes        | Yes          | Yes      | Yes          |
+
+
+
+**关键字—this**
+
+``````
+1. 在java中，this关键字比较难理解，它的作用和其词义很接近。
+	它在方法内部使用，即这个方法所属对象的引用；
+	它在构造器内部使用，表示该构造器正在初始化的对象。
+2. this表示当前对象，可以调用类的属性、方法和构造器
+3. 什么时候使用this关键字呢？
+	当在方法内需要用到调用该方法的对象时，就用this。
+``````
+
+
+
+**关键字—package**
+
+``````
+1. package语句作为Java源文件的第一条语句，指明该文件中定义的类所在的包。(若缺省该语句，则指定为无名包)。它的格式为：
+	package 顶层包名.子包名 ;
+	举例：pack\Test.java
+		package p1;    //指定类Test属于包p1
+		public class Test{
+		        public void display(){
+			System.out.println("in  method display()");
+		        }
+		}
+2. 包对应于文件系统的目录，package语句中，用 “.” 来指明包(目录)的层次；
+3. 包通常用小写单词，类名首字母通常大写。
+``````
+
+
+
+**关键字—import**
+
+``````
+为使用定义在不同包中的Java类，需用import语句来引入指定包层次下所需要的类或全部类(.*)。import语句告诉编译器到哪里去寻找类。
+语法格式：
+	import  包名[.子包名…]. <类名 |*>
+应用举例： 
+	import  p1.Test;   //import p1.*;表示可以引入p1包中的任意类
+	public class TestPackage{
+		public static void main(String args[]){
+		          Test t = new Test();          //Test类在p1包中定义
+		          t.display();
+		}
+      }
+
+``````
+
+
+
+**MVC设计模式**
+
+``````
+MVC是常用的设计模式之一，将整个程序分为三个层次：视图模型层，控制器层，与数据模型层。这种将程序输入输出、数据处理，以及数据的展示分离开来的设计模式使程序结构变的灵活而且清晰，同时也描述了程序各个对象间的通信方式，降低了程序的耦合性。
+
+模型层   model 主要处理数据
+    数据对象封装    model.bean/domain
+    数据库操作类    model.dao
+    数据库         model.db
+
+视图层             view 显示数据
+    相关工具类     	view.utils
+    自定义view     view.ui
+
+控制层  controller 处理业务逻辑
+    应用界面相关       controller.activity
+    存放fragment      controller.fragment
+    显示列表的适配器    controller.adapter
+    服务相关的         controller.service
+    抽取的基类         controller.base
+
+``````
+
+
+
+**JDK中主要的包介绍**
+
+``````
+1. java.lang----包含一些Java语言的核心类，如String、Math、Integer、System和Thread，提供常用功能。
+2. java.net----包含执行与网络相关的操作的类和接口。
+3. java.io   ----包含能提供多种输入/输出功能的类。
+4. java.util----包含一些实用工具类，如定义系统特性、接口的集合框架类、使用与日期日历相关的函数。
+5. java.text----包含了一些java格式化相关的类
+6. java.sql----包含了java进行JDBC数据库编程的相关类/接口
+7. java.awt----包含了构成抽象窗口工具集（abstract window toolkits）的多个类，这些类被用来构建和管理应用程序的图形用户界面(GUI)。
+8. java.applet----包含applet运行所需的一些类。
+``````
+
+
 
