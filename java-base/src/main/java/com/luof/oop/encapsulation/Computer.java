@@ -31,4 +31,6 @@ public class Computer {
     public String say() {
         return "CPU : " + cpu + "GHz, 内存 : " + memory + "G";
     }
+
+
 }
