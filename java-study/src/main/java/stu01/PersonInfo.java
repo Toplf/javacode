@@ -1,3 +1,4 @@
+package stu01;
 public class PersonInfo {
 
 	//练习 : 写一个类PersonInfo将个人的基本信息（姓名、性别、籍贯、住址）打印到控制台上输出。

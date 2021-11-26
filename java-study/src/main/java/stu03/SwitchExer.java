@@ -1,3 +1,4 @@
+package stu03;
 public class SwitchExer {
 
 	public static void main(String[] args) {

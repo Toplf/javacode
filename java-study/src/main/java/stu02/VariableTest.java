@@ -1,3 +1,4 @@
+package stu02;
 class VariableTest4 {
 
 	public static void main(String[] args) {

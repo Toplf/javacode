@@ -1,3 +1,4 @@
+package stu01;
 // 没有主方法, 所以这个类称为非主类. 非主类不能执行!!
 public class Hello3 {
 

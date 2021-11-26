@@ -1,3 +1,4 @@
+package stu03;
 public class IfExer {
 
 	/*

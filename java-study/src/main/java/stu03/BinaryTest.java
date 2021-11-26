@@ -1,3 +1,4 @@
+package stu03;
 class BinaryTest2 {
 
 	public static void main(String[] args) {

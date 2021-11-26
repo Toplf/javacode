@@ -1,3 +1,4 @@
+package stu02;
 class StringTest3 {
 
 

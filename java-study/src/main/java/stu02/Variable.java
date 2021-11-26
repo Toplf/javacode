@@ -1,3 +1,4 @@
+package stu02;
 public class Variable {
 
 	//1 写一个Variable类，main方法中使用double类型声明var1和var2变量，
