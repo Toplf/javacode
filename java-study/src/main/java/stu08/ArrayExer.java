@@ -1,9 +1,9 @@
 package stu08;
 
 class ArrayExer4 {
-	
+
 	public static void main(String[] args) {
-		// ����һ��36��Ԫ�ص��ַ�����, ǰ26������26����д��ĸ, ��10�����������ַ�'0'~'9'
+		// 创建一个36个元素的字符数组, 前26个保存26个大写字母, 后10个保存数字字符'0'~'9'
 		char[] arr = new char[36];
 		for (int i = 0; i < arr.length; i++) {
 			if (i < 26) {
@@ -12,8 +12,8 @@ class ArrayExer4 {
 				arr[i] = (char)('0' + i - 26);
 			}
 		}
-		
-		// ����
+
+		// 遍历
 		for (int i = 0; i < arr.length; i++) {
 			System.out.print(arr[i] + " ");
 		}
@@ -22,9 +22,9 @@ class ArrayExer4 {
 }
 
 class ArrayExer3 {
-	
+
 	public static void main(String[] args) {
-		// ����һ��36��Ԫ�ص��ַ�����, ǰ26������26����д��ĸ, ��10�����������ַ�'0'~'9'
+		// 创建一个36个元素的字符数组, 前26个保存26个大写字母, 后10个保存数字字符'0'~'9'
 		char[] arr = new char[36];
 		for (int i = 0; i < 26; i++) {
 			arr[i] = (char)('A' + i);
@@ -32,8 +32,8 @@ class ArrayExer3 {
 		for (int i = 26; i < arr.length; i++) {
 			arr[i] = (char)('0' + i - 26);
 		}
-		
-		// ����
+
+		// 遍历
 		for (int i = 0; i < arr.length; i++) {
 			System.out.print(arr[i] + " ");
 		}
@@ -42,27 +42,27 @@ class ArrayExer3 {
 }
 
 class ArrayExer2 {
-	
+
 	public static void main(String[] args) {
-		// ����һ��26��Ԫ�ص��ַ�����, ����26����д��ĸ
+		// 创建一个26个元素的字符数组, 保存26个大写字母
 		char[] arr = new char[26];
 		char ch = 'A';
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = ch++;
 		}
-		// ����
+		// 遍历
 		for (int i = 0; i < arr.length; i++) {
 			System.out.print(arr[i] + " ");
 		}
 		System.out.println();
 	}
-	
+
 }
 
 public class ArrayExer {
-	
+
 	public static void main(String[] args) {
-		// ����һ������, ����������պͽ��������
+		// 创建一个数组, 保存你的生日和今天的日期
 		// 1978, 6, 9, 2019, 12, 3
 		int[] arr = new int[6];
 		arr[0] = 1978;
@@ -71,9 +71,9 @@ public class ArrayExer {
 		arr[3] = 2019;
 		arr[4] = 12;
 		arr[5] = 3;
-		
-		System.out.println("���� : " + arr[0] + "��" + arr[1] + "��" + arr[2] + "��");
-		System.out.println("���� : " + arr[3] + "��" + arr[4] + "��" + arr[5] + "��");
-		
+
+		System.out.println("生日 : " + arr[0] + "年" + arr[1] + "月" + arr[2] + "日");
+		System.out.println("今天 : " + arr[3] + "年" + arr[4] + "月" + arr[5] + "日");
+
 	}
 }
